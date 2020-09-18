@@ -1,0 +1,21 @@
+.nav__link {
+  margin-right: 15px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-family: "Helvetica";
+  color: #e5e5e5;
+  font-weight: 500;
+}
+
+.nav__link a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+    font-family: "Helvetica";
+}
+
+.nav__link a.active {
+  font-weight: 800;
+  color: #fff;
+}

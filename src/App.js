@@ -1,26 +1,23 @@
 import React from "react";
 import "./App.css";
-import Row from "./components/Row/Row";
-import Banner from "./components/Banner/Banner";
-import requests from "./requests";
 import Navbar from "./components/Navbar/Navbar";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import Home from "./components/Pages/HomePage/Home";
+import Series from "./components/Pages/SeriesPage/Series";
 
 function App() {
   return (
     <div className="App">
-      <Navbar/>
-      <Banner />
-      <Row
-        title="NETFLIX ORIGINALS"
-        fetchUrl={requests.fetchNetflixOriginals}
-      />
-      <Row title="Trending Now" fetchUrl={requests.fetchTrending} />
-      <Row title="Top Rated" fetchUrl={requests.fetchTopRated} />
-      <Row title="Action Movies" fetchUrl={requests.fetchActionMovies} />
-      <Row title="Comedy Movies" fetchUrl={requests.fetchComedyMovies} />
-      <Row title="Horror Movies" fetchUrl={requests.fetchHorrorMovies} />
-      <Row title="Romance Movies" fetchUrl={requests.fetchRomanceMovies} />
-      <Row title="Documentaries" fetchUrl={requests.fetchDocumentaries} />
+      <BrowserRouter>
+        <Navbar />
+        <Switch>
+          <Route path="/home" component={Home} />
+          <Route path="/series" component={Series} />
+          <Route path="/films" component={Series} />
+          <Route path="/latest" component={Series} />
+          <Route path="/my-list" component={Series} />
+        </Switch>
+      </BrowserRouter>
     </div>
   );
 }

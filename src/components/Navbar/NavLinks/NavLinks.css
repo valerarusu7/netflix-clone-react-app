@@ -1,0 +1,8 @@
+.nav__links {
+  display: flex;
+  list-style: none;
+  margin-left: 80px;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5px;
+}
